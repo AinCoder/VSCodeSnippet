@@ -1,0 +1,67 @@
+{
+    "NextJS Component": {
+        "prefix": "fc",
+        "body": [
+            "\"use client\";",
+            "",
+            "import { FC } from \"react\";",
+            "",
+            "interface ${TM_FILENAME_BASE/(.*)$/${1:/capitalize}/}$2Props {}",
+            "",
+            "const ${TM_FILENAME_BASE/(.*)$/${1:/capitalize}/}$2: FC<${TM_FILENAME_BASE/(.*)$/${1:/capitalize}/}$2Props> = ({$2}) => {",
+            "  return (",
+            "    <>",
+            "      <h2>${TM_FILENAME_BASE/(.*)$/${1:/capitalize}/}$2</h2>",
+            "    </>",
+            "  );",
+            "};",
+            "",
+            "export default ${TM_FILENAME_BASE/(.*)$/${1:/capitalize}/}$2;",
+            ""
+        ],
+        "description": "NextJS component"
+    },
+    "NextJS Server Component": {
+        "prefix": "fcs",
+        "body": [
+            "import { FC } from \"react\";",
+            "",
+            "interface ${TM_FILENAME_BASE/(.*)$/${1:/capitalize}/}$2Props {}",
+            "",
+            "const ${TM_FILENAME_BASE/(.*)$/${1:/capitalize}/}$2: FC<${TM_FILENAME_BASE/(.*)$/${1:/capitalize}/}$2Props> = async ({}) => {",
+            "  return (",
+            "    <>",
+            "      <h2>${TM_FILENAME_BASE/(.*)$/${1:/capitalize}/}$2</h2>",
+            "    </>",
+            "  );",
+            "};",
+            "",
+            "export default ${TM_FILENAME_BASE/(.*)$/${1:/capitalize}/}$2;",
+            ""
+        ],
+        "description": "NextJS server component"
+    },
+    "Redux slice": {
+        "scope": "javascript,typescript",
+        "prefix": "rds",
+        "body": [
+            "import { createSlice } from '@reduxjs/toolkit/react';",
+            "",
+            "export interface ${TM_FILENAME_BASE/(.*)$/${1:/capitalize}/}$2StateType {}",
+            "",
+            "export const ${TM_FILENAME_BASE/(.*)$/${1:/capitalize}/}$2InitialtState: ${TM_FILENAME_BASE/(.*)$/${1:/capitalize}/}$2StateType = {};",
+            "",
+            "const ${TM_FILENAME_BASE/(.*)$/${1:/capitalize}/}$2 = createSlice({",
+            "  name: '${TM_FILENAME_BASE/(.*)$/${1:/capitalize}/}$2',",
+            "  initialState: ${TM_FILENAME_BASE/(.*)$/${1:/capitalize}/}$2InitialtState,",
+            "  reducers: {},",
+            "});",
+            "",
+            "export default ${TM_FILENAME_BASE/(.*)$/${1:/capitalize}/}$2.reducer;",
+            "",
+            "export const {} = ${TM_FILENAME_BASE/(.*)$/${1:/capitalize}/}$2.actions;",
+            ""
+        ],
+        "description": "Create redux slice file"
+    }
+}
